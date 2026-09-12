@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeatherNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-default">
+
+  <main class="app">
+    <header class="app-header">
+      <h1>WeatherNow</h1>
+      <p class="tagline">Type a city, get the sky.</p>
+    </header>
+
+    <form id="search-form" class="search-form" autocomplete="off">
+      <div class="search-field">
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Search for a city"
+          role="combobox"
+          aria-expanded="false"
+          aria-controls="suggestions"
+          aria-autocomplete="list"
+          required
+        >
+        <ul id="suggestions" class="suggestions hidden" role="listbox"></ul>
+      </div>
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="status-message" class="status-message" role="status"></p>
+
+    <section id="current-weather" class="current-weather hidden">
+      <div class="location-line">
+        <h2 id="location-name"></h2>
+        <span id="location-time"></span>
+      </div>
+
+      <div class="current-main">
+        <div id="current-icon" class="weather-icon" aria-hidden="true"></div>
+        <div class="current-temp-block">
+          <span id="current-temp" class="current-temp"></span>
+          <span id="current-desc" class="current-desc"></span>
+        </div>
+      </div>
+
+      <div class="current-details">
+        <div class="detail">
+          <span class="detail-label">Feels like</span>
+          <span id="feels-like" class="detail-value"></span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Humidity</span>
+          <span id="humidity" class="detail-value"></span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Wind</span>
+          <span id="wind" class="detail-value"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="forecast" class="forecast hidden">
+      <h3>Next 5 days</h3>
+      <div id="forecast-list" class="forecast-list"></div>
+    </section>
+
+    <footer class="app-footer">
+      <span class="footer-label">Recent</span>
+      <div id="recent-cities" class="recent-cities"></div>
+    </footer>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
