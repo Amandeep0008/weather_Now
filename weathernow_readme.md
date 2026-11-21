@@ -4,10 +4,6 @@ A responsive, real-time weather lookup web application built with Vanilla JavaSc
 
 🔗 **Live Demo:** [weather-now-mdfz.vercel.app](https://weather-now-mdfz.vercel.app)
 
-## 📸 Screenshots
-
-<!-- Add 1–2 screenshots inside a /screenshots folder and update the paths below -->
-![WeatherNow Dashboard](./screenshots/weathernow-preview.png)
 
 ## ✨ Key Features
 
